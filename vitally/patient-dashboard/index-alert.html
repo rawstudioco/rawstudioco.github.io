@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Dashboard - Alert Banner</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="stylesheet" href="css/corrections.css" />
+
+    <style>
+    input:checked + svg {
+    	display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <link rel="stylesheet" href="css/export.tailwind.css" />
+
+      <div class="tailwind" style="margin: 10px;">
+        <!-- sidebar+main content -->
+        <div class="relative flex-col sm:flex-row flex space-y-10 sm:space-y-0 space-x-0 sm:space-x-10">
+
+          <!-- PAGE CONTENT -->
+          <div class="w-full md:w-4/5 md:mx-auto md:mr-0">
+            <!-- PAGE activity -->
+            <article>
+
+              <!-- Alert -->
+              <div class="md:flex md:items-center text-center md:text-left bg-white p-6 md:px-8 rounded mb-16">
+                <img class="mb-6 md:mr-12" width="136" height="40" src="img/icon-free-delivery.svg" alt="Free Delivery">
+                <p class="font14px text-gray-500">Thanks for confirming your account. Get your <span class="text-vitaly-green font-weight-bold">free delivery</span> within Australia if you order before 12/06/2020! Any questions, get in contact 👋.</p>
+              </div>
+              <!-- End Alert -->
+
+              <!-- Treatment Plan -->
+              <div class="flex justify-between content-center mb-4">
+                <div class="flex items-center">
+                  <h5 class="text-vitaly-dark">Bill Bagfoot’s treatment plan</h5>
+                  <button class="d-none md:block bg-wild-sand text-gray-500 hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 ml-6 rounded font12px">Send an enquiry</button>
+                </div>
+
+                <div class="flex items-center">
+                  <img src="img/avatar.png" width="24" height="24" class="mr-3" alt="Bill Bagfoot">
+                  <p class="font12px text-right mr-4">Bill Bagfoot</p>
+                  <svg width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 4L0.669873 0.249999L9.33013 0.25L5 4Z" fill="#BAB6BC"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="bg-white border border-wild-sand rounded-tl-md rounded-tr-md py-6 px-6 md:px-8">
+
+                <!-- Intro content -->
+                <div class="flex justify-between items-center mb-4">
+                  <p class="font-weight-semibold font12px text-gray-500">Dietary & Lifestyle</p>
+
+                  <a class="flex items-center font12px text-gray-400" href="#">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 11.4277L4.31445 11.127L7.37695 8.06445L6.74805 7.43555L4.4375 9.74609L4.4375 2.5L3.5625 2.5L3.5625 9.74609L1.25195 7.43555L0.623047 8.06445L3.68555 11.127L4 11.4277ZM7.9375 1.625L7.9375 0.75L0.0625009 0.749999L0.0625009 1.625L7.9375 1.625Z" fill="#847D88"/>
+                    </svg>
+                    <span class="ml-3">Download as PDF</span>
+                  </a>
+                </div>
+                <div class="bg-gray-100 rounded-md py-6 px-6 md:px-8 block md:flex">
+                  <div class="w-full md:w-1/2 flex items-start md:pr-2 mb-4 md:mb-0">
+                    <div class="mr-6">
+                      <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.48438 0.480399C3.30127 0.482841 3.19141 0.499931 3.19141 0.499931L2.54688 0.558524L2.625 1.20306C2.625 1.20306 2.77881 2.63128 3.79688 3.68352C1.73145 4.00335 0.125 5.70745 0.125 7.78509C0.125 10.0263 1.12354 11.8036 2.29297 12.9999C2.87647 13.5981 3.49658 14.0497 4.08984 14.3671C4.68311 14.6845 5.22754 14.8749 5.75 14.8749C6.0918 14.8749 6.42383 14.8163 6.72656 14.7187C6.90967 14.6601 7.09033 14.6601 7.27344 14.7187C7.57617 14.8163 7.9082 14.8749 8.25 14.8749C8.81641 14.8749 9.36084 14.6357 9.94922 14.2695C10.5376 13.9033 11.1504 13.3954 11.7266 12.7656C12.8789 11.5082 13.875 9.76263 13.875 7.78509C13.875 5.47796 11.8901 3.62493 9.5 3.62493C8.85791 3.62493 8.26465 3.78118 7.72266 4.03509C7.72021 4.018 7.70801 3.9887 7.70312 3.95696C8.02295 2.28948 9.1875 1.67181 9.1875 1.67181L8.5625 0.578056C8.5625 0.578056 7.68115 1.10784 7.03906 2.23821C6.83643 1.92815 6.56787 1.62298 6.23828 1.35931C5.24707 0.56829 4.03125 0.475517 3.48438 0.480399ZM4.08984 1.80852C4.52197 1.87444 5.05664 2.01604 5.45703 2.33587C5.86475 2.66058 6.13818 3.13665 6.29688 3.54681C5.86231 3.48333 5.31787 3.32464 4.91016 2.99993C4.50732 2.67766 4.24854 2.21624 4.08984 1.80852ZM4.5 4.87493C5.31299 4.87493 6.03564 5.17034 6.58984 5.63665L7 5.96868L7.41016 5.63665C7.96436 5.17034 8.68701 4.87493 9.5 4.87493C11.2529 4.87493 12.625 6.19573 12.625 7.78509C12.625 9.33538 11.812 10.832 10.8086 11.9257C10.3081 12.4726 9.76367 12.8998 9.28516 13.1952C8.80664 13.4907 8.37207 13.6249 8.25 13.6249C8.04492 13.6249 7.85205 13.5883 7.66406 13.5273C7.23438 13.3881 6.76562 13.3881 6.33594 13.5273C6.14795 13.5883 5.95508 13.6249 5.75 13.6249C5.58154 13.6249 5.14941 13.5273 4.67578 13.2734C4.20215 13.0195 3.66504 12.6264 3.17188 12.121C2.18555 11.1103 1.375 9.66009 1.375 7.78509C1.375 6.19573 2.74707 4.87493 4.5 4.87493Z" fill="#847D88"/>
+                      </svg>
+                    </div>
+
+                    <p class="expand-content text-gray-400 font12px">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                      <br>
+                      <br>
+                      Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                      <br>
+                      <br>
+                      Aliquet sollicitudin eget amet viverra felis vel ac egestas. Sed morbi pellentesque iaculis vitae. Praesent proin facilisi amet, libero. Consectetur adipiscing purus consectetur sed ornare.
+                    </p>
+                  </div>
+
+                  <div class="w-full md:w-1/2 flex items-start md:pl-2">
+                    <div class="mr-6">
+                      <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.63672 0.125C8.58691 0.125 7.72266 0.989258 7.72266 2.03906C7.72266 3.08887 8.58691 3.95312 9.63672 3.95312C10.689 3.95312 11.5703 3.08887 11.5703 2.03906C11.5703 0.989258 10.689 0.125 9.63672 0.125ZM9.63672 1.375C10.0127 1.375 10.3203 1.66553 10.3203 2.03906C10.3203 2.4126 10.0127 2.70312 9.63672 2.70312C9.26318 2.70312 8.97266 2.41504 8.97266 2.03906C8.97266 1.66553 9.26318 1.375 9.63672 1.375ZM5.08594 2.625C4.78564 2.66162 4.48291 2.80078 4.26562 3.03516L2.15625 5.32031L3.09375 6.17969L5.18359 3.89453C5.20557 3.87256 5.23486 3.85791 5.26172 3.875L6.25781 4.53906L4.79297 6.57031C4.33398 7.21484 4.40967 8.10107 4.96875 8.66016L7.17578 10.8672L5.35938 14.5H6.76562L8.30859 11.4336C8.55029 10.9526 8.45508 10.3691 8.07422 9.98828L5.86719 7.78125C5.74023 7.6543 5.72314 7.43945 5.82812 7.29297L7.29297 5.24219L7.80078 5.57422L8.79688 7.07812C9.02881 7.42481 9.41455 7.625 9.83203 7.625H12.625V6.375H9.83203L8.77734 4.77344L8.69922 4.67578L8.60156 4.59766L5.96484 2.83984C5.69873 2.66162 5.38623 2.58838 5.08594 2.625ZM4.53906 9.20703L3.62109 10.125H0.75V11.375H3.62109C3.95068 11.375 4.26562 11.2407 4.5 11.0039L5.41797 10.0859L4.53906 9.20703Z" fill="#847D88"/>
+                      </svg>
+                    </div>
+
+                    <p class="expand-content text-gray-400 font12px">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                      <br>
+                      <br>
+                      Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                      <br>
+                      <br>
+                      Aliquet sollicitudin eget amet viverra felis vel ac egestas. Sed morbi pellentesque iaculis vitae. Praesent proin facilisi amet, libero. Consectetur adipiscing purus consectetur sed ornare.
+                    </p>
+                  </div>
+                </div>
+                <!-- End Intro content -->
+
+                <!-- Start Table block 1 -->
+                <div class="mt-10">
+
+                  <!-- Weeks titling -->
+                  <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center">
+                      <span class="indicator mr-4 block lg:hidden bg-vitaly-green rounded"></span>
+                      <p class="font-weight-semibold font12px text-gray-500">Weeks 1 - 3</p>
+                      <span class="d-none lg:block ml-8 rounded py-1 px-2 bg-vitaly-green-200 text-vitaly-green uppercase font10px font-weight-bold">Current</span>
+                    </div>
+
+                    <div class="flex items-center justify-end">
+                      <input type="checkbox" id="auto-generate" class="raw-checkbox">
+                      <label for="auto-generate" class="raw-label font12px text-gray-500 font-normal">Auto-generate order</label>
+
+                      <a href="#" class="d-none lg:block leading-none lg:ml-4">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14ZM7.40367 8.51255H6.19809V8.42002C6.20533 7.1388 6.57461 6.74376 7.21541 6.35227C7.65348 6.08179 7.99017 5.74013 7.99017 5.24188C7.99017 4.68313 7.54487 4.32011 6.99095 4.32011C6.48048 4.32011 5.9881 4.64042 5.95552 5.3095H4.66667C4.70287 3.9571 5.73106 3.26667 6.99819 3.26667C8.38117 3.26667 9.33333 4.02116 9.33333 5.22409C9.33333 6.03908 8.91699 6.57293 8.25084 6.96441C7.66072 7.3203 7.41091 7.66552 7.40367 8.42002V8.51255ZM7.62814 9.95037C7.62452 10.3846 7.25886 10.7333 6.83165 10.7333C6.38997 10.7333 6.03155 10.3846 6.03517 9.95037C6.03155 9.52329 6.38997 9.17452 6.83165 9.17452C7.25886 9.17452 7.62452 9.52329 7.62814 9.95037Z" fill="#463D4A"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Weeks titling -->
+
+                  <!-- Table legend -->
+                  <div class="d-none lg:flex border border-b-0 border-wild-sand px-5 py-3 rounded-tl rounded-tr">
+                    <div class="w-3/5 flex">
+                      <div class="w-full lg:w-1/4 flex items-start">
+                        <p class="font12px font-weight-semibold text-gray-400">Products</p>
+                      </div>
+                      <div class="lg:w-3/5 lg:pl-20">
+                        <p class="font12px font-weight-semibold text-gray-400">Dosage Instructions</p>
+                      </div>
+                    </div>
+                    <div class="w-2/5 flex items-center pl-3 text-right">
+                      <div class="w-1/3 text-right">
+                        <p class="font12px font-weight-semibold text-gray-400">Quantity</p>
+                      </div>
+                      <div class="w-1/3 text-right">
+                        <p class="font12px font-weight-semibold text-gray-400">Price per unit</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Table legend -->
+
+                  <!-- Table row #1 -->
+                  <div class="flex border border-wild-sand p-5 rounded-tl rounded-tr lg:rounded-none">
+                    <div class="w-2/3 lg:w-3/5 lg:flex">
+                      <div class="w-full flex items-start">
+                        <!-- Thumb -->
+                        <div class="rounded border border-wild-sand overflow-hidden flex-none">
+                          <img width="40" height="40" src="img/product.png" alt="Product">
+                        </div>
+                        <!-- End Thumb -->
+                        <div class="ml-4 lg:flex w-full">
+                          <!-- Product Details -->
+                          <div class="lg:w-1/4">
+                            <p class="font12px text-gray-400">BioCeuticals</p>
+                            <p class="font14px text-vitaly-dark mb-3">Aminoplex</p>
+                            <!-- Product weight mobile -->
+                            <div class="block lg:hidden raw-select">
+                              <select>
+                                <option>100g</option>
+                                <option>200g</option>
+                                <option>300g</option>
+                              </select>
+                              <div class="raw-select__arrow"></div>
+                            </div>
+                            <!-- End product weight mobile -->
+                            <!-- Product weight Desktop -->
+                            <div class="d-none lg:flex">
+                              <div>
+                                <input type="radio" id="1-100g" name="product-weight-1" class="pill-radio">
+                                <label for="1-100g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-purple rounded">100g</label>
+                              </div>
+                              <div class="ml-2">
+                                <input type="radio" id="1-200g" name="product-weight-1" class="pill-radio">
+                                <label for="1-200g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-gray rounded">200g</label>
+                              </div>
+                            </div>
+                            <!-- End Product weight Desktop -->
+                          </div>
+                          <!-- End Product Details -->
+                          <!-- Dosage -->
+                          <div class="lg:w-3/4 lg:pl-4">
+                            <a href="" class="toggle-info mt-8 lg:mt-0 font12px text-gray-400 underline block lg:hidden hover:no-underline">Dosage infos</a>
+                            <div class="expand-info d-none lg:block pt-4 lg:pt-0">
+                              <p class="font12px text-vitaly-dark mb-2">4 tablets per day before food</p>
+                              <p class="expand-content text-gray-300 font12px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                                <br>
+                                <br>
+                                Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Dosage -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-1/3 lg:w-2/5 flex flex-col lg:flex-row lg:items-center lg:pl-3 text-right lg:text-left">
+                      <!-- Price -->
+                      <div class="mb-5 lg:mb-0 order-1 lg:order-2 lg:w-1/3 text-right">
+                        <p class="font12px text-vitaly-dark">$35.67</p>
+                        <p class="font10px text-gray-500">Save <span class="text-vitaly-green">8%</span> on RRP</p>
+                      </div>
+                      <!-- End Price -->
+                      <!-- Quantity -->
+                      <div class="mb-5 lg:mb-0 order-2 lg:order-1 lg:w-1/3">
+                        <div class="increment-group flex justify-end">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                          <input id="quantity-1" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" pattern="d*" name="value" value="1">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                        </div>
+                      </div>
+                      <!-- End Quantity -->
+                      <!-- Action -->
+                      <div class="order-3 lg:w-1/3 text-right lg:pr-6">
+                        <div class="d-none lg:block">
+                          <input type="checkbox" id="1-select" class="raw-checkbox">
+                          <label for="1-select" class="raw-label font12px text-gray-500 font-normal">Select</label>
+                        </div>
+                        <button class="block lg:hidden border border-vitaly-purple text-vitaly-purple hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 mx-auto mr-0 rounded font12px">Add to cart</button>
+                      </div>
+                      <!-- End Action -->
+                    </div>
+                  </div>
+                  <!-- End Table row #1 -->
+
+                  <!-- Table row #2 -->
+                  <div class="flex border border-wild-sand border-t-0 p-5">
+                    <div class="w-2/3 lg:w-3/5 lg:flex">
+                      <div class="w-full flex items-start">
+                        <!-- Thumb -->
+                        <div class="rounded border border-wild-sand overflow-hidden flex-none">
+                          <img width="40" height="40" src="img/product.png" alt="Product">
+                        </div>
+                        <!-- End Thumb -->
+                        <div class="ml-4 lg:flex w-full">
+                          <!-- Product Details -->
+                          <div class="lg:w-1/4">
+                            <p class="font12px text-gray-400">BioCeuticals</p>
+                            <p class="font14px text-vitaly-dark mb-3">Aminoplex</p>
+                            <!-- Product weight multi -->
+                            <div class="block raw-select">
+                              <select>
+                                <option>100g</option>
+                                <option>200g</option>
+                                <option>300g</option>
+                              </select>
+                              <div class="raw-select__arrow"></div>
+                            </div>
+                            <!-- End product weight multi -->
+                          </div>
+                          <!-- End Product Details -->
+                          <!-- Dosage -->
+                          <div class="lg:w-3/4 lg:pl-4">
+                            <a href="" class="toggle-info mt-8 lg:mt-0 font12px text-gray-400 underline block lg:hidden hover:no-underline">Dosage infos</a>
+                            <div class="expand-info d-none lg:block pt-4 lg:pt-0">
+                              <p class="font12px text-vitaly-dark mb-2">4 tablets per day before food</p>
+                              <p class="expand-content text-gray-300 font12px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                                <br>
+                                <br>
+                                Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Dosage -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-1/3 lg:w-2/5 flex flex-col lg:flex-row lg:items-center lg:pl-3 text-right lg:text-left">
+                      <!-- Price -->
+                      <div class="mb-5 lg:mb-0 order-1 lg:order-2 lg:w-1/3 text-right">
+                        <p class="font12px text-vitaly-dark">$35.67</p>
+                        <p class="font10px text-gray-500">Save <span class="text-vitaly-green">8%</span> on RRP</p>
+                      </div>
+                      <!-- End Price -->
+                      <!-- Quantity -->
+                      <div class="mb-5 lg:mb-0 order-2 lg:order-1 lg:w-1/3">
+                        <div class="increment-group flex justify-end">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                          <input id="quantity-2" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" pattern="d*" name="value" value="1">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                        </div>
+                      </div>
+                      <!-- End Quantity -->
+                      <!-- Action -->
+                      <div class="order-3 lg:w-1/3 text-right lg:pr-6">
+                        <div class="d-none lg:block">
+                          <input type="checkbox" id="2-select" class="raw-checkbox">
+                          <label for="2-select" class="raw-label font12px text-gray-500 font-normal">Select</label>
+                        </div>
+                        <button class="block lg:hidden border border-vitaly-purple text-vitaly-purple hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 mx-auto mr-0 rounded font12px">Add to cart</button>
+                      </div>
+                      <!-- End Action -->
+                    </div>
+                  </div>
+                  <!-- End Table row #2 -->
+
+                  <!-- Table row #3 -->
+                  <div class="flex border border-wild-sand border-t-0 p-5 rounded-bl rounded-br">
+                    <div class="w-2/3 lg:w-3/5 lg:flex">
+                      <div class="w-full flex items-start">
+                        <!-- Thumb -->
+                        <div class="rounded border border-wild-sand overflow-hidden flex-none">
+                          <img width="40" height="40" src="img/product.png" alt="Product">
+                        </div>
+                        <!-- End Thumb -->
+                        <div class="ml-4 lg:flex w-full">
+                          <!-- Product Details -->
+                          <div class="lg:w-1/4">
+                            <p class="font12px text-gray-400">BioCeuticals</p>
+                            <p class="font14px text-vitaly-dark mb-3">Aminoplex</p>
+                            <!-- Product weight mobile -->
+                            <div class="block lg:hidden raw-select">
+                              <select>
+                                <option>100g</option>
+                                <option>200g</option>
+                                <option>300g</option>
+                              </select>
+                              <div class="raw-select__arrow"></div>
+                            </div>
+                            <!-- End product weight mobile -->
+                            <!-- Product weight Desktop -->
+                            <div class="d-none lg:flex">
+                              <div>
+                                <input type="radio" id="3-100g" name="product-weight-3" class="pill-radio">
+                                <label for="3-100g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-purple rounded">100g</label>
+                              </div>
+                              <div class="ml-2">
+                                <input type="radio" id="3-200g" name="product-weight-3" class="pill-radio">
+                                <label for="3-200g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-gray rounded">200g</label>
+                              </div>
+                            </div>
+                            <!-- End Product weight Desktop -->
+                          </div>
+                          <!-- End Product Details -->
+                          <!-- Dosage -->
+                          <div class="lg:w-3/4 lg:pl-4">
+                            <a href="" class="toggle-info mt-8 lg:mt-0 font12px text-gray-400 underline block lg:hidden hover:no-underline">Dosage infos</a>
+                            <div class="expand-info d-none lg:block pt-4 lg:pt-0">
+                              <p class="font12px text-vitaly-dark mb-2">4 tablets per day before food</p>
+                              <p class="expand-content text-gray-300 font12px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                                <br>
+                                <br>
+                                Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Dosage -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-1/3 lg:w-2/5 flex flex-col lg:flex-row lg:items-center lg:pl-3 text-right lg:text-left">
+                      <!-- Price -->
+                      <div class="mb-5 lg:mb-0 order-1 lg:order-2 lg:w-1/3 text-right">
+                        <p class="font12px text-vitaly-dark">$35.67</p>
+                        <p class="font10px text-gray-500">Save <span class="text-vitaly-green">8%</span> on RRP</p>
+                      </div>
+                      <!-- End Price -->
+                      <!-- Quantity -->
+                      <div class="mb-5 lg:mb-0 order-2 lg:order-1 lg:w-1/3">
+                        <div class="increment-group flex justify-end">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                          <input id="quantity-3" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" pattern="d*" name="value" value="1">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                        </div>
+                      </div>
+                      <!-- End Quantity -->
+                      <!-- Action -->
+                      <div class="order-3 lg:w-1/3 text-right lg:pr-6">
+                        <div class="d-none lg:block">
+                          <input type="checkbox" id="3-select" class="raw-checkbox">
+                          <label for="3-select" class="raw-label font12px text-gray-500 font-normal">Select</label>
+                        </div>
+                        <button class="block lg:hidden border border-vitaly-purple text-vitaly-purple hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 mx-auto mr-0 rounded font12px">Add to cart</button>
+                      </div>
+                      <!-- End Action -->
+                    </div>
+                  </div>
+                  <!-- End Table row #3 -->
+
+                </div>
+                <!-- End Table block 1 -->
+
+                <!-- Start Table block 2 -->
+                <div class="mt-10">
+
+                  <!-- Weeks titling -->
+                  <div class="mb-6">
+                    <p class="font-weight-semibold font12px text-gray-500">Weeks 4 - 5</p>
+                  </div>
+                  <!-- End Weeks titling -->
+
+                  <!-- Table legend -->
+                  <div class="d-none lg:flex border border-b-0 border-wild-sand px-5 py-3 rounded-tl rounded-tr">
+                    <div class="w-3/5 flex">
+                      <div class="w-full lg:w-1/4 flex items-start">
+                        <p class="font12px font-weight-semibold text-gray-400">Products</p>
+                      </div>
+                      <div class="lg:w-3/5 lg:pl-20">
+                        <p class="font12px font-weight-semibold text-gray-400">Dosage Instructions</p>
+                      </div>
+                    </div>
+                    <div class="w-2/5 flex items-center pl-3 text-right">
+                      <div class="w-1/3 text-right">
+                        <p class="font12px font-weight-semibold text-gray-400">Quantity</p>
+                      </div>
+                      <div class="w-1/3 text-right">
+                        <p class="font12px font-weight-semibold text-gray-400">Price per unit</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Table legend -->
+
+                  <!-- Table row #4 -->
+                  <div class="flex border border-wild-sand p-5 rounded-tl rounded-tr lg:rounded-none">
+                    <div class="w-2/3 lg:w-3/5 lg:flex">
+                      <div class="w-full flex items-start">
+                        <!-- Thumb -->
+                        <div class="rounded border border-wild-sand overflow-hidden flex-none">
+                          <img width="40" height="40" src="img/product.png" alt="Product">
+                        </div>
+                        <!-- End Thumb -->
+                        <div class="ml-4 lg:flex w-full">
+                          <!-- Product Details -->
+                          <div class="lg:w-1/4">
+                            <p class="font12px text-gray-400">BioCeuticals</p>
+                            <p class="font14px text-vitaly-dark mb-3">Aminoplex</p>
+                            <!-- Product weight mobile -->
+                            <div class="block lg:hidden raw-select">
+                              <select>
+                                <option>100g</option>
+                                <option>200g</option>
+                                <option>300g</option>
+                              </select>
+                              <div class="raw-select__arrow"></div>
+                            </div>
+                            <!-- End product weight mobile -->
+                            <!-- Product weight Desktop -->
+                            <div class="d-none lg:flex">
+                              <div>
+                                <input type="radio" id="4-100g" name="product-weight-4" class="pill-radio">
+                                <label for="4-100g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-purple rounded">100g</label>
+                              </div>
+                              <div class="ml-2">
+                                <input type="radio" id="4-200g" name="product-weight-4" class="pill-radio">
+                                <label for="4-200g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-gray rounded">200g</label>
+                              </div>
+                            </div>
+                            <!-- End Product weight Desktop -->
+                          </div>
+                          <!-- End Product Details -->
+                          <!-- Dosage -->
+                          <div class="lg:w-3/4 lg:pl-4">
+                            <a href="" class="toggle-info mt-8 lg:mt-0 font12px text-gray-400 underline block lg:hidden hover:no-underline">Dosage infos</a>
+                            <div class="expand-info d-none lg:block pt-4 lg:pt-0">
+                              <p class="font12px text-vitaly-dark mb-2">4 tablets per day before food</p>
+                              <p class="expand-content text-gray-300 font12px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                                <br>
+                                <br>
+                                Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Dosage -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-1/3 lg:w-2/5 flex flex-col lg:flex-row lg:items-center lg:pl-3 text-right lg:text-left">
+                      <!-- Price -->
+                      <div class="mb-5 lg:mb-0 order-1 lg:order-2 lg:w-1/3 text-right">
+                        <p class="font12px text-vitaly-dark">$35.67</p>
+                        <p class="font10px text-gray-500">Save <span class="text-vitaly-green">8%</span> on RRP</p>
+                      </div>
+                      <!-- End Price -->
+                      <!-- Quantity -->
+                      <div class="mb-5 lg:mb-0 order-2 lg:order-1 lg:w-1/3">
+                        <div class="increment-group flex justify-end">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                          <input id="quantity-4" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" pattern="d*" name="value" value="1">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                        </div>
+                      </div>
+                      <!-- End Quantity -->
+                      <!-- Action -->
+                      <div class="order-3 lg:w-1/3 text-right lg:pr-6">
+                        <div class="d-none lg:block">
+                          <input type="checkbox" id="4-select" class="raw-checkbox">
+                          <label for="4-select" class="raw-label font12px text-gray-500 font-normal">Select</label>
+                        </div>
+                        <button class="block lg:hidden border border-vitaly-purple text-vitaly-purple hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 mx-auto mr-0 rounded font12px">Add to cart</button>
+                      </div>
+                      <!-- End Action -->
+                    </div>
+                  </div>
+                  <!-- End Table row #4 -->
+
+                  <!-- Table row #5 -->
+                  <div class="flex border border-wild-sand border-t-0 p-5 rounded-bl rounded-br">
+                    <div class="w-2/3 lg:w-3/5 lg:flex">
+                      <div class="w-full flex items-start">
+                        <!-- Thumb -->
+                        <div class="rounded border border-wild-sand overflow-hidden flex-none">
+                          <img width="40" height="40" src="img/product.png" alt="Product">
+                        </div>
+                        <!-- End Thumb -->
+                        <div class="ml-4 lg:flex w-full">
+                          <!-- Product Details -->
+                          <div class="lg:w-1/4">
+                            <p class="font12px text-gray-400">BioCeuticals</p>
+                            <p class="font14px text-vitaly-dark mb-3">Aminoplex</p>
+                            <!-- Product weight mobile -->
+                            <div class="block lg:hidden raw-select">
+                              <select>
+                                <option>100g</option>
+                                <option>200g</option>
+                                <option>300g</option>
+                              </select>
+                              <div class="raw-select__arrow"></div>
+                            </div>
+                            <!-- End product weight mobile -->
+                            <!-- Product weight Desktop -->
+                            <div class="d-none lg:flex">
+                              <div>
+                                <input type="radio" id="5-100g" name="product-weight-5" class="pill-radio">
+                                <label for="5-100g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-purple rounded">100g</label>
+                              </div>
+                              <div class="ml-2">
+                                <input type="radio" id="5-200g" name="product-weight-5" class="pill-radio">
+                                <label for="5-200g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-gray rounded">200g</label>
+                              </div>
+                            </div>
+                            <!-- End Product weight Desktop -->
+                          </div>
+                          <!-- End Product Details -->
+                          <!-- Dosage -->
+                          <div class="lg:w-3/4 lg:pl-4">
+                            <a href="" class="toggle-info mt-8 lg:mt-0 font12px text-gray-400 underline block lg:hidden hover:no-underline">Dosage infos</a>
+                            <div class="expand-info d-none lg:block pt-4 lg:pt-0">
+                              <p class="font12px text-vitaly-dark mb-2">4 tablets per day before food</p>
+                              <p class="expand-content text-gray-300 font12px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                                <br>
+                                <br>
+                                Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Dosage -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-1/3 lg:w-2/5 flex flex-col lg:flex-row lg:items-center lg:pl-3 text-right lg:text-left">
+                      <!-- Price -->
+                      <div class="mb-5 lg:mb-0 order-1 lg:order-2 lg:w-1/3 text-right">
+                        <p class="font12px text-vitaly-dark">$35.67</p>
+                        <p class="font10px text-gray-500">Save <span class="text-vitaly-green">8%</span> on RRP</p>
+                      </div>
+                      <!-- End Price -->
+                      <!-- Quantity -->
+                      <div class="mb-5 lg:mb-0 order-2 lg:order-1 lg:w-1/3">
+                        <div class="increment-group flex justify-end">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                          <input id="quantity-5" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" pattern="d*" name="value" value="1">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                        </div>
+                      </div>
+                      <!-- End Quantity -->
+                      <!-- Action -->
+                      <div class="order-3 lg:w-1/3 text-right lg:pr-6">
+                        <div class="d-none lg:block">
+                          <input type="checkbox" id="5-select" class="raw-checkbox">
+                          <label for="5-select" class="raw-label font12px text-gray-500 font-normal">Select</label>
+                        </div>
+                        <button class="block lg:hidden border border-vitaly-purple text-vitaly-purple hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 mx-auto mr-0 rounded font12px">Add to cart</button>
+                      </div>
+                      <!-- End Action -->
+                    </div>
+                  </div>
+                  <!-- End Table row #5 -->
+
+                </div>
+                <!-- End Table block 1 -->
+
+                <!-- Total -->
+                <div class="mt-10 flex justify-end">
+                  <div class="text-right">
+                    <p class="font12px text-gray-400 mb-2">Subtotal</p>
+                    <h5 class="text-vitaly-dark mb-2 leading-none">$35.67</h5>
+                    <p class="font10px text-gray-500">Save <span class="text-vitaly-green">15%</span> on RRP</p>
+                  </div>
+                </div>
+                <!-- End Total -->
+
+              </div>
+
+              <!-- Final Actions -->
+              <div class="bg-white border border-wild-sand border-t-0 rounded-bl-md rounded-br-md py-6 px-6 md:px-8 flex justify-between items-center">
+                <p class="d-none lg:block w-full leading-none font12px">Any questions about the treatment? <a href="#" class="text-vitaly-purple hover:underline">Send an enquiry to Bill</a></p>
+
+                <div class="flex w-full justify-end">
+                  <button class="block bg-wild-sand text-gray-500 hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 ml-6 rounded font12px">Download PDF</button>
+                  <button class="block bg-vitaly-purple text-white hover:bg-vitaly-dark hover:text-white font-bold py-3 px-4 ml-6 rounded font12px">Add To Cart</button>
+                </div>
+              </div>
+              <!-- End Final Actions -->
+              <!-- End Treatment Plan -->
+
+              <!-- Prescribed products -->
+              <div class="mt-16 mb-4">
+                <h5 class="text-vitaly-dark">Prescribed products</h5>
+              </div>
+
+              <div class="bg-white border border-wild-sand rounded-md py-6 px-6 md:px-8 md:py-8">
+
+                <!-- Start Table block 3 -->
+                <div>
+
+                  <!-- Table legend -->
+                  <div class="d-none lg:flex border border-b-0 border-wild-sand px-5 py-3 rounded-tl rounded-tr">
+                    <div class="w-3/5 flex">
+                      <div class="w-full lg:w-1/4 flex items-start">
+                        <p class="font12px font-weight-semibold text-gray-400">Products</p>
+                      </div>
+                      <div class="lg:w-3/5 lg:pl-20">
+                        <p class="font12px font-weight-semibold text-gray-400">Dosage Instructions</p>
+                      </div>
+                    </div>
+                    <div class="w-2/5 flex items-center pl-3 text-right">
+                      <div class="w-1/3 text-right">
+                        <p class="font12px font-weight-semibold text-gray-400">Quantity</p>
+                      </div>
+                      <div class="w-1/3 text-right">
+                        <p class="font12px font-weight-semibold text-gray-400">Price per unit</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Table legend -->
+
+                  <!-- Table row #6 -->
+                  <div class="flex border border-wild-sand p-5 rounded-tl rounded-tr lg:rounded-none">
+                    <div class="w-2/3 lg:w-3/5 lg:flex">
+                      <div class="w-full flex items-start">
+                        <!-- Thumb -->
+                        <div class="rounded border border-wild-sand overflow-hidden flex-none">
+                          <img width="40" height="40" src="img/product.png" alt="Product">
+                        </div>
+                        <!-- End Thumb -->
+                        <div class="ml-4 lg:flex w-full">
+                          <!-- Product Details -->
+                          <div class="lg:w-1/4">
+                            <p class="font12px text-gray-400">BioCeuticals</p>
+                            <p class="font14px text-vitaly-dark mb-3">Aminoplex</p>
+                            <!-- Product weight mobile -->
+                            <div class="block lg:hidden raw-select">
+                              <select>
+                                <option>100g</option>
+                                <option>200g</option>
+                                <option>300g</option>
+                              </select>
+                              <div class="raw-select__arrow"></div>
+                            </div>
+                            <!-- End product weight mobile -->
+                            <!-- Product weight Desktop -->
+                            <div class="d-none lg:flex">
+                              <div>
+                                <input type="radio" id="6-100g" name="product-weight-6" class="pill-radio">
+                                <label for="6-100g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-purple rounded">100g</label>
+                              </div>
+                              <div class="ml-2">
+                                <input type="radio" id="6-200g" name="product-weight-6" class="pill-radio">
+                                <label for="6-200g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-gray rounded">200g</label>
+                              </div>
+                            </div>
+                            <!-- End Product weight Desktop -->
+                          </div>
+                          <!-- End Product Details -->
+                          <!-- Dosage -->
+                          <div class="lg:w-3/4 lg:pl-4">
+                            <a href="" class="toggle-info mt-8 lg:mt-0 font12px text-gray-400 underline block lg:hidden hover:no-underline">Dosage infos</a>
+                            <div class="expand-info d-none lg:block pt-4 lg:pt-0">
+                              <p class="font12px text-vitaly-dark mb-2">4 tablets per day before food</p>
+                              <p class="expand-content text-gray-300 font12px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                                <br>
+                                <br>
+                                Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Dosage -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-1/3 lg:w-2/5 flex flex-col lg:flex-row lg:items-center lg:pl-3 text-right lg:text-left">
+                      <!-- Price -->
+                      <div class="mb-5 lg:mb-0 order-1 lg:order-2 lg:w-1/3 text-right">
+                        <p class="font12px text-vitaly-dark">$35.67</p>
+                        <p class="font10px text-gray-500">Save <span class="text-vitaly-green">8%</span> on RRP</p>
+                      </div>
+                      <!-- End Price -->
+                      <!-- Quantity -->
+                      <div class="mb-5 lg:mb-0 order-2 lg:order-1 lg:w-1/3">
+                        <div class="increment-group flex justify-end">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                          <input id="quantity-6" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" pattern="d*" name="value" value="1">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                        </div>
+                      </div>
+                      <!-- End Quantity -->
+                      <!-- Action -->
+                      <div class="order-3 lg:w-1/3 text-right lg:pr-6">
+                        <div class="d-none lg:block">
+                          <input type="checkbox" id="6-select" class="raw-checkbox">
+                          <label for="6-select" class="raw-label font12px text-gray-500 font-normal">Select</label>
+                        </div>
+                        <button class="block lg:hidden border border-vitaly-purple text-vitaly-purple hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 mx-auto mr-0 rounded font12px">Add to cart</button>
+                      </div>
+                      <!-- End Action -->
+                    </div>
+                  </div>
+                  <!-- End Table row #6 -->
+
+                  <!-- Table row #7 -->
+                  <div class="flex border border-wild-sand border-t-0 p-5 rounded-bl rounded-br">
+                    <div class="w-2/3 lg:w-3/5 lg:flex">
+                      <div class="w-full flex items-start">
+                        <!-- Thumb -->
+                        <div class="rounded border border-wild-sand overflow-hidden flex-none">
+                          <img width="40" height="40" src="img/product.png" alt="Product">
+                        </div>
+                        <!-- End Thumb -->
+                        <div class="ml-4 lg:flex w-full">
+                          <!-- Product Details -->
+                          <div class="lg:w-1/4">
+                            <p class="font12px text-gray-400">BioCeuticals</p>
+                            <p class="font14px text-vitaly-dark mb-3">Aminoplex</p>
+                            <!-- Product weight mobile -->
+                            <div class="block lg:hidden raw-select">
+                              <select>
+                                <option>100g</option>
+                                <option>200g</option>
+                                <option>300g</option>
+                              </select>
+                              <div class="raw-select__arrow"></div>
+                            </div>
+                            <!-- End product weight mobile -->
+                            <!-- Product weight Desktop -->
+                            <div class="d-none lg:flex">
+                              <div>
+                                <input type="radio" id="7-100g" name="product-weight-7" class="pill-radio">
+                                <label for="7-100g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-purple rounded">100g</label>
+                              </div>
+                              <div class="ml-2">
+                                <input type="radio" id="7-200g" name="product-weight-7" class="pill-radio">
+                                <label for="7-200g" class="pill-label font10px text-gray-500 font-weight-semibold leading-none py-1 pb-2 px-3 pill-gray rounded">200g</label>
+                              </div>
+                            </div>
+                            <!-- End Product weight Desktop -->
+                          </div>
+                          <!-- End Product Details -->
+                          <!-- Dosage -->
+                          <div class="lg:w-3/4 lg:pl-4">
+                            <a href="" class="toggle-info mt-8 lg:mt-0 font12px text-gray-400 underline block lg:hidden hover:no-underline">Dosage infos</a>
+                            <div class="expand-info d-none lg:block pt-4 lg:pt-0">
+                              <p class="font12px text-vitaly-dark mb-2">4 tablets per day before food</p>
+                              <p class="expand-content text-gray-300 font12px">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum sit tortor, quis sed. Velit euismod risus, id malesuada diam a, blandit. Lorem sed quis eu ac. Interdum tristique pulvinar pretium tortor.
+                                <br>
+                                <br>
+                                Tincidunt vitae tristique tempor euismod turpis vel nec. Consequat in massa non elit pellentesque. Vitae adipiscing etiam suspendisse urna elit nascetur. Platea dictumst amet, id interdum ornare at.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Dosage -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-1/3 lg:w-2/5 flex flex-col lg:flex-row lg:items-center lg:pl-3 text-right lg:text-left">
+                      <!-- Price -->
+                      <div class="mb-5 lg:mb-0 order-1 lg:order-2 lg:w-1/3 text-right">
+                        <p class="font12px text-vitaly-dark">$35.67</p>
+                        <p class="font10px text-gray-500">Save <span class="text-vitaly-green">8%</span> on RRP</p>
+                      </div>
+                      <!-- End Price -->
+                      <!-- Quantity -->
+                      <div class="mb-5 lg:mb-0 order-2 lg:order-1 lg:w-1/3">
+                        <div class="increment-group flex justify-end">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                          <input id="quantity-7" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" pattern="d*" name="value" value="1">
+                          <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                        </div>
+                      </div>
+                      <!-- End Quantity -->
+                      <!-- Action -->
+                      <div class="order-3 lg:w-1/3 text-right lg:pr-6">
+                        <div class="d-none lg:block">
+                          <input type="checkbox" id="7-select" class="raw-checkbox">
+                          <label for="7-select" class="raw-label font12px text-gray-500 font-normal">Select</label>
+                        </div>
+                        <button class="block lg:hidden border border-vitaly-purple text-vitaly-purple hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 mx-auto mr-0 rounded font12px">Add to cart</button>
+                      </div>
+                      <!-- End Action -->
+                    </div>
+                  </div>
+                  <!-- End Table row #7 -->
+
+                </div>
+                <!-- End Table block 3 -->
+
+              </div>
+              <!-- End Prescribed products -->
+
+              <!-- View retail range -->
+              <div class="mt-16 mb-64 d-none lg:flex justify-center">
+                <button class="block bg-wild-sand text-gray-500 hover:bg-vitaly-purple hover:text-white font-bold py-3 px-4 ml-6 rounded font14px">View our retail range</button>
+              </div>
+              <!-- End View retail range -->
+
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/patient-dashboard.js"></script>
+  </body>
+</html>

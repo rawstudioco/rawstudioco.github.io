@@ -1,0 +1,346 @@
+ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .border-underline {
+    box-shadow: inset 0 -3px 0 0 currentColor;
+  }
+
+  .select-height {
+    height: 25px;
+  }
+
+  .plan-progress-bar:after {
+    content: "";
+    max-width: var(--percent);
+    height: 100%;
+    width: 100%;
+    background-color: #0bc196;
+  }
+
+  .product-tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .product-tooltip .tooltip-text {
+    width: 250px;
+    top: -25px;
+    left: 25px;
+    visibility: hidden;
+  }
+  .product-tooltip .tooltip-text ul {
+    list-style-type: disc;
+    margin-left: 16px;
+  }
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .product-tooltip:hover .tooltip-text {
+    visibility: visible;
+  }
+
+  .product-tooltip1 .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #7820a0 transparent transparent;
+  }
+
+  .scrollbar-w-2::-webkit-scrollbar {
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+  }
+  .scrollbar-w-3::-webkit-scrollbar {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+  }
+  .scrollbar-track-gray-lighter::-webkit-scrollbar-track {
+    --bg-opacity: 1 !important;
+    background-color: #e2e8f0 !important;
+    background-color: rgba(226, 232, 240, var(--bg-opacity)) !important;
+  }
+
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem !important;
+  }
+  .scrollbar-thumb-gray::-webkit-scrollbar-thumb {
+    --bg-opacity: 1 !important;
+    background-color: #cbd5e0 !important;
+    background-color: rgba(203, 213, 224, var(--bg-opacity)) !important;
+  }
+  .scrolling-touch {
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .font10px {
+    font-size: 10px;
+  }
+  .font12px {
+    font-size: 12px;
+  }
+  .font14px {
+    font-size: 14px;
+  }
+  .font16px {
+    font-size: 16px;
+  }
+  .font18px {
+    font-size: 18px;
+  }
+  .font20px {
+    font-size: 20px;
+  }
+  .font22px {
+    font-size: 22px;
+  }
+  label {
+    margin: 0;
+  }
+
+  #product-sidebar {
+    right: 10px;
+  }
+  @media (min-width: 576px) {
+    #product-sidebar {
+      width: 457px;
+      right: 0;
+    }
+  }
+
+  .currently-taking option {
+    color: #1f313d;
+  }
+
+  /* ============================== */
+  /* Added by Art Williams */
+  /* ============================== */
+
+  /* Font weights behave strangely, adding font family to call the font weights better */
+  .font-weight-normal {
+    font-family: Inter;
+  }
+
+  .font-weight-semibold {
+    font-family: Inter-SemiBold;
+  }
+
+  .font-weight-bold {
+    font-family: Inter-Bold;
+  }
+
+  /* .hidden is used by bootstrap with !important values */
+  .d-none {
+    display: none;
+  }
+
+  /* No font family seems to be rendered for button elements */
+  button {
+    font-family: Inter-Bold;
+  }
+
+  /* Toggle read more */
+  .morecontent span {
+    display: none;
+  }
+
+  .toggle-expand {
+    display: block;
+  }
+
+  .indicator {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Additional Vitaly colours */
+  .text-vitaly-green {
+    color: #4CAF50;
+  }
+
+  .bg-vitaly-green {
+    background: #4CAF50;
+  }
+
+  .bg-vitaly-green-200 {
+    background: rgba(76, 175, 80, 0.2);
+  }
+
+  .bg-vitaly-purple-200 {
+    background: rgba(120, 32, 160, 0.2);
+  }
+
+  /* Checkboxes */
+  .raw-checkbox:not(:checked),
+  .raw-checkbox:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  .raw-checkbox:not(:checked) + label,
+  .raw-checkbox:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+  }
+
+  .raw-checkbox:not(:checked) + label:before  {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #BAB6BC;
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  .raw-checkbox:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #7820A0;
+    background: #7820A0;
+    border-radius: 4px;
+  }
+
+  .raw-checkbox:not(:checked) + label:after,
+  .raw-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    transition: all .2s;
+    width: 9px;
+    height: 7px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4l2.5 2.5 6-6' stroke='%23fff'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .raw-checkbox:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .raw-checkbox:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .raw-checkbox:checked:focus + label:before,
+  .raw-checkbox:not(:checked):focus + label:before {
+    border: 1px solid #7820A0;
+  }
+
+  .raw-label:hover:before {
+    border: 1px solid #7820A0!important;
+  }
+
+  /* Radio */
+  .pill-radio:not(:checked),
+  .pill-radio:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .pill-radio:not(:checked) + label.pill-purple {
+    background: rgba(120, 32, 160, 0.2);
+    color: #7820A0;
+  }
+
+  .pill-radio:not(:checked) + label.pill-purple:hover {
+    background: rgba(120, 32, 160, 0.4);
+  }
+
+  .pill-radio:checked + label.pill-purple {
+    background: #7820A0;
+    color: white;
+  }
+
+  .pill-radio:not(:checked) + label.pill-gray {
+    background: rgba(132, 125, 136, 0.2);
+    color: #463D4A;
+  }
+
+  .pill-radio:not(:checked) + label.pill-gray:hover {
+    background: rgba(132, 125, 136, 0.4);
+  }
+
+  .pill-radio:checked + label.pill-gray {
+    background: #463D4A;
+    color: white;
+  }
+
+  .pill-radio:not(:checked) + label,
+  .pill-radio:checked + label {
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Dropdown */
+  .raw-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 85px;
+  }
+
+  .raw-select select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    outline: 0;
+    border: 1px solid #BAB6BC;
+    border-radius: 4px;
+    font-size: 12px;
+    background: transparent;
+    color: #21082D;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .raw-select select::-ms-expand {
+    display: none;
+  }
+
+  .raw-select select:hover,
+  .raw-select select:focus {
+    border-color: #7820A0;
+  }
+
+  .raw-select select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .raw-select__arrow {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 10px;
+    height: 5px;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 4L.67.25h8.66L5 4z' fill='%23BAB6BC'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .raw-select select:hover ~ .raw-select__arrow,
+  .raw-select select:focus ~ .raw-select__arrow {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 4L.67.25h8.66L5 4z' fill='%237820A0'/%3E%3C/svg%3E");
+  }
+
+  .raw-select select:disabled ~ .raw-select__arrow {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 4L.67.25h8.66L5 4z' fill='%23BAB6BC'/%3E%3C/svg%3E");
+  }
