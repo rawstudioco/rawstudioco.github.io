@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="stylesheet" href="css/corrections.css" />
+
+    <style>
+    input:checked + svg {
+    	display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <link rel="stylesheet" href="css/export.tailwind.css" />
+
+      <div class="tailwind" style="margin: 10px;">
+        <!-- sidebar+main content -->
+        <div class="relative flex-col sm:flex-row flex space-y-10 sm:space-y-0 space-x-0 sm:space-x-10">
+
+          <!-- PAGE CONTENT -->
+          <div class="w-full md:w-2/3 md:mx-auto">
+            <!-- PAGE activity -->
+            <article>
+
+              <!-- Container -->
+              <div class="text-center mb-8">
+                <img class="block mx-auto mb-8" width="39" height="48" src="img/icon-calculator.svg" alt="Calculator">
+                <h3 class="text-vitaly-dark">Clinic costs calculator</h3>
+                <p class="text-gray-400 w-3/4 mx-auto">Run through a handful of questions, which we’ll combine with your vital.ly data to analyse how to earn more from your time</p>
+              </div>
+
+              <div class="bg-white border border-wild-sand rounded-tl-md rounded-tr-md md:flex">
+
+                <!-- Left -->
+                <div class="w-full lg:w-1/4 py-6 px-6 md:py-10 md:px-12 border border-t-0 border-l-0 border-r-0 md:border md:border-t-0 md:border-l-0 md:border-b-0 md:border-r-1 border-wild-sand">
+
+                  <!-- Side progress nav -->
+                  <ul class="progress-nav flex justify-center md:block m-0">
+                    <li class="active px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-3 rounded-full border border-vitaly-purple bg-white"></span>
+                      <a href="#" class="text-vitaly-purple font14px font-weight-bold">Patients</a>
+                    </li>
+                    <li class="px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-4 rounded-full border border-gray-300 bg-white"></span>
+                      <a href="#" class="text-gray-400 font14px hover:text-vitaly-purple hover:no-underline">Brands</a>
+                    </li>
+                    <li class="px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-4 rounded-full border border-gray-300 bg-white"></span>
+                      <a href="#" class="text-gray-400 font14px hover:text-vitaly-purple hover:no-underline">Clinic</a>
+                    </li>
+                    <li class="px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-4 rounded-full border border-gray-300 bg-white"></span>
+                      <a href="#" class="text-gray-400 font14px hover:text-vitaly-purple hover:no-underline">Results</a>
+                    </li>
+                  </ul>
+                  <!-- End side progress nav -->
+
+                </div>
+                <!-- End Left -->
+
+                <!-- Right -->
+                <div class="w-full lg:w-3/4 py-6 px-6 md:p-10">
+
+                  <!-- Title -->
+                  <h6 class="text-vitaly-dark mt-0 mb-8">How do your patients currently access products?</h6>
+                  <!-- End Title -->
+
+                  <!-- Select Field w/ Incriment counter #1 -->
+                  <div class="mb-8 flex items-center check-fieldset disabled">
+                    <!-- Action -->
+                    <div class="w-auto pr-3">
+                      <div class="block">
+                        <input type="checkbox" id="1-select" class="raw-checkbox">
+                        <label for="1-select" class="raw-label font12px text-gray-500 font-normal visibly-hidden">% vital.ly patient ordering</label>
+                      </div>
+                    </div>
+                    <!-- End Action -->
+
+                    <!-- Quantity -->
+                    <div class="pr-5 check-fieldset_item">
+                      <div class="increment-group flex justify-end">
+                        <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                        <input id="quantity-1" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" data-interval="1" data-upper-limit="100" type="text" pattern="d*" name="value" value="50">
+                        <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                      </div>
+                    </div>
+                    <!-- End Quantity -->
+
+                    <!-- Label -->
+                    <div class="check-fieldset_item">
+                      <p class="font12px">% vital.ly patient ordering</p>
+                    </div>
+                    <!-- End Label -->
+                  </div>
+                  <!-- End Select Field w/ Incriment counter -->
+
+                  <!-- Select Field w/ Incriment counter #2 -->
+                  <div class="mb-8 flex items-center check-fieldset disabled">
+                    <!-- Action -->
+                    <div class="w-auto pr-3">
+                      <div class="block">
+                        <input type="checkbox" id="2-select" class="raw-checkbox">
+                        <label for="2-select" class="raw-label font12px text-gray-500 font-normal visibly-hidden">% clinic managed (i.e. purchased in-person or posted)</label>
+                      </div>
+                    </div>
+                    <!-- End Action -->
+
+                    <!-- Quantity -->
+                    <div class="pr-5 check-fieldset_item">
+                      <div class="increment-group flex justify-end">
+                        <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                        <input id="quantity-2" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" data-interval="1" data-upper-limit="100" pattern="d*" name="value" value="50">
+                        <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                      </div>
+                    </div>
+                    <!-- End Quantity -->
+
+                    <!-- Label -->
+                    <div class="check-fieldset_item">
+                      <p class="font12px">% clinic managed (i.e. purchased in-person or posted)</p>
+                    </div>
+                    <!-- End Label -->
+                  </div>
+                  <!-- End Select Field w/ Incriment counter -->
+
+                  <!-- Select Field w/ Incriment counter #3 -->
+                  <div class="mb-8 flex items-center check-fieldset disabled">
+                    <!-- Action -->
+                    <div class="w-auto pr-3">
+                      <div class="block">
+                        <input type="checkbox" id="3-select" class="raw-checkbox">
+                        <label for="3-select" class="raw-label font12px text-gray-500 font-normal visibly-hidden">% via other websites/stores/pharmacy</label>
+                      </div>
+                    </div>
+                    <!-- End Action -->
+
+                    <!-- Quantity -->
+                    <div class="pr-5 check-fieldset_item">
+                      <div class="increment-group flex justify-end">
+                        <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tl rounded-bl hover:border-vitaly-purple font-weight-normal" type="button" data-direction="dec">-</button>
+                        <input id="quantity-3" class="increment-input font12px text-vitaly-dark text-center w-12 border border-gray-300 border-l-0 border-r-0 py-1 px-2" type="text" data-interval="1" data-upper-limit="100" pattern="d*" name="value" value="50">
+                        <button class="increment-button flex justify-center items-center leading-none font12px text-vitaly-dark text-center w-8 border border-gray-300 rounded-tr rounded-br hover:border-vitaly-purple font-weight-normal" type="button" data-direction="inc">+</button>
+                      </div>
+                    </div>
+                    <!-- End Quantity -->
+
+                    <!-- Label -->
+                    <div class="check-fieldset_item">
+                      <p class="font12px">% via other websites/stores/pharmacy</p>
+                    </div>
+                    <!-- End Label -->
+                  </div>
+                  <!-- End Select Field w/ Incriment counter -->
+
+                  <!-- Continue -->
+                  <div class="w-full flex justify-center md:justify-end mt-16 md:mt-20">
+                    <button class="block bg-vitaly-purple text-white hover:bg-vitaly-dark hover:text-white font-bold py-3 px-4 rounded font14px continue-button">Continue</button>
+                  </div>
+                  <!-- End Continue -->
+
+                </div>
+                <!-- End Right -->
+
+              </div>
+              <!-- End Container -->
+
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/calculator.js"></script>
+  </body>
+</html>
