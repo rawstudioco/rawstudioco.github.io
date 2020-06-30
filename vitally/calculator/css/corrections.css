@@ -249,6 +249,49 @@ ul {
   }
 
   /* Radio */
+  .raw-radio:not(:checked),
+  .raw-radio:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  .raw-radio:not(:checked) + label,
+  .raw-radio:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+  }
+
+  .raw-radio:not(:checked) + label:before  {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #BAB6BC;
+    background: #fff;
+    border-radius: 25px;
+  }
+
+  .raw-radio:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #BAB6BC;
+    background: #7820A0;
+    border-radius: 25px;
+    box-shadow: inset 0 0px 0px 2px white;
+  }
+
+  .raw-radio:checked:focus + label:before,
+  .raw-radio:not(:checked):focus + label:before {
+    border: 1px solid #7820A0;
+  }
+
+  /* Pill Radio */
   .pill-radio:not(:checked),
   .pill-radio:checked {
     position: absolute;
@@ -287,6 +330,31 @@ ul {
   .pill-radio:checked + label {
     position: relative;
     cursor: pointer;
+  }
+
+  /* Raw input */
+  .raw-input {
+    display: block;
+    width: 100%;
+  }
+
+  textarea.raw-input {
+    resize: vertical;
+  }
+
+  .raw-input:focus {
+    outline: none;
+  }
+
+  .raw-input_icon {
+    top: 7px;
+    left: 8px;
+  }
+
+  .raw-input::-webkit-input-placeholder,
+  .raw-input:-ms-input-placeholder,
+  .raw-input::placeholder {
+    color: hsl(281, 5%, 51%);
   }
 
   /* Dropdown */

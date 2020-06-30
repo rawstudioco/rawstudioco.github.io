@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="stylesheet" href="css/corrections.css" />
+
+    <style>
+    input:checked + svg {
+    	display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <link rel="stylesheet" href="css/export.tailwind.css" />
+
+      <div class="tailwind" style="margin: 10px;">
+        <!-- sidebar+main content -->
+        <div class="relative flex-col sm:flex-row flex space-y-10 sm:space-y-0 space-x-0 sm:space-x-10">
+
+          <!-- PAGE CONTENT -->
+          <div class="w-full md:w-2/3 md:mx-auto">
+            <!-- PAGE activity -->
+            <article>
+
+              <!-- Container -->
+              <div class="text-center mb-8">
+                <h3 class="text-vitaly-dark">Health Appraisal Questionnaire</h3>
+                <p class="text-gray-400 w-3/4 mx-auto">Please fill out those questions before the appointment.</p>
+              </div>
+
+              <div class="bg-white border border-wild-sand rounded-tl-md rounded-tr-md md:flex">
+
+                <!-- Left -->
+                <div class="w-full md:w-1/3 lg:w-1/4 py-6 px-6 md:py-10 md:px-12 border border-t-0 border-l-0 border-r-0 md:border md:border-t-0 md:border-l-0 md:border-b-0 md:border-r-1 border-wild-sand">
+
+                  <!-- Side progress nav -->
+                  <ul class="progress-nav flex justify-center md:block m-0">
+                    <li class="active px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-3 rounded-full border border-vitaly-purple bg-white"></span>
+                      <a href="#" class="text-vitaly-purple font14px font-weight-bold">Section</a>
+                    </li>
+                    <li class="px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-4 rounded-full border border-gray-300 bg-white"></span>
+                      <a href="#" class="text-gray-400 font14px hover:text-vitaly-purple hover:no-underline">Section</a>
+                    </li>
+                    <li class="px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-4 rounded-full border border-gray-300 bg-white"></span>
+                      <a href="#" class="text-gray-400 font14px hover:text-vitaly-purple hover:no-underline">Section</a>
+                    </li>
+                    <li class="px-4 md:px-0 md:py-4 md:flex md:items-center text-center md:text-left">
+                      <span class="block mx-auto md:m-0 md:mr-4 rounded-full border border-gray-300 bg-white"></span>
+                      <a href="#" class="text-gray-400 font14px hover:text-vitaly-purple hover:no-underline">Section</a>
+                    </li>
+                  </ul>
+                  <!-- End side progress nav -->
+
+                </div>
+                <!-- End Left -->
+
+                <!-- Right -->
+                <div class="w-full md:w-2/3 lg:w-3/4 py-6 px-6 md:p-10">
+
+                  <!-- Fieldset -->
+                  <div class="mb-12">
+                    <!-- Label -->
+                    <h6 class="text-vitaly-dark mt-0 mb-4">What is your weight? (Kilograms)</h6>
+                    <!-- End Label -->
+                    <textarea class="raw-input border border-gray-300 rounded-md px-5 py-3 font14px text-vitaly-dark focus:border-vitaly-purple" rows="3" placeholder="Type something..."></textarea>
+                  </div>
+                  <!-- End fieldset -->
+
+                  <!-- Fieldset -->
+                  <div class="mb-12">
+                    <!-- Label -->
+                    <h6 class="text-vitaly-dark mt-0 mb-4">What is your weight? (Kilograms)</h6>
+                    <!-- End Label -->
+                    <input class="raw-input border border-gray-300 rounded-md px-5 py-3 font12px text-vitaly-dark focus:border-vitaly-purple" type="text" placeholder="Placeholder" name="date" id="date" />
+                  </div>
+                  <!-- End fieldset -->
+
+                  <!-- Fieldset -->
+                  <div class="mb-12">
+                    <!-- Label -->
+                    <h6 class="text-vitaly-dark mt-0 mb-4">When did you do something? (Date)</h6>
+                    <!-- End Label -->
+                    <div class="relative">
+                      <img class="absolute raw-input_icon" src="img/icon-calendar.svg" width="20" height="20" alt="Date">
+                      <input class="raw-input border border-gray-300 rounded-md px-5 py-3 pl-16 font12px text-vitaly-dark focus:border-vitaly-purple" type="text" placeholder="Select time" name="date" id="date" />
+                    </div>
+                  </div>
+                  <!-- End fieldset -->
+
+                  <!-- Fieldset -->
+                  <div class="mb-12">
+                    <!-- Label -->
+                    <h6 class="text-vitaly-dark mt-0 mb-4">What is your weight? (Kilograms)</h6>
+                    <!-- End Label -->
+
+                    <!-- Radio -->
+                    <div class="mb-3 flex items-center">
+                      <!-- Action -->
+                      <div class="w-auto pr-1">
+                        <div class="block">
+                          <input type="radio" name="radio[]" id="1-radio" class="raw-radio">
+                          <label for="1-radio" class="raw-label font12px text-gray-500 font-normal visibly-hidden">Option 1</label>
+                        </div>
+                      </div>
+                      <!-- End Action -->
+
+                      <!-- Label -->
+                      <div class="check-fieldset_item">
+                        <p class="font12px">Option 1</p>
+                      </div>
+                      <!-- End Label -->
+                    </div>
+                    <div class="flex items-center">
+                      <!-- Action -->
+                      <div class="w-auto pr-1">
+                        <div class="block">
+                          <input type="radio" name="radio[]" id="2-radio" class="raw-radio">
+                          <label for="2-radio" class="raw-label font12px text-gray-500 font-normal visibly-hidden">Option 2</label>
+                        </div>
+                      </div>
+                      <!-- End Action -->
+
+                      <!-- Label -->
+                      <div class="check-fieldset_item">
+                        <p class="font12px">Option 2</p>
+                      </div>
+                      <!-- End Label -->
+                    </div>
+                    <!-- End Radio -->
+                  </div>
+                  <!-- End fieldset -->
+
+                  <!-- Fieldset -->
+                  <div>
+                    <!-- Label -->
+                    <h6 class="text-vitaly-dark mt-0 mb-4">What is your weight? (Kilograms)</h6>
+                    <!-- End Label -->
+
+                    <!-- Checkboxes -->
+                    <div class="mb-3 flex items-center">
+                      <!-- Action -->
+                      <div class="w-auto pr-1">
+                        <div class="block">
+                          <input type="checkbox" name="checkbox[]" id="1-select" class="raw-checkbox">
+                          <label for="1-select" class="raw-label font12px text-gray-500 font-normal visibly-hidden">Option 1</label>
+                        </div>
+                      </div>
+                      <!-- End Action -->
+
+                      <!-- Label -->
+                      <div class="check-fieldset_item">
+                        <p class="font12px">Option 1</p>
+                      </div>
+                      <!-- End Label -->
+                    </div>
+                    <div class="flex items-center">
+                      <!-- Action -->
+                      <div class="w-auto pr-1">
+                        <div class="block">
+                          <input type="checkbox" name="checkbox[]" id="2-select" class="raw-checkbox">
+                          <label for="2-select" class="raw-label font12px text-gray-500 font-normal visibly-hidden">Option 2</label>
+                        </div>
+                      </div>
+                      <!-- End Action -->
+
+                      <!-- Label -->
+                      <div class="check-fieldset_item">
+                        <p class="font12px">Option 2</p>
+                      </div>
+                      <!-- End Label -->
+                    </div>
+                    <!-- End Checkboxes -->
+                  </div>
+                  <!-- End fieldset -->
+
+                  <!-- Continue -->
+                  <div class="w-full flex justify-center md:justify-end mt-16 md:mt-20">
+                    <button class="block bg-vitaly-purple text-white hover:bg-vitaly-dark hover:text-white font-bold py-3 px-4 rounded font14px continue-button">Continue</button>
+                  </div>
+                  <!-- End Continue -->
+
+                </div>
+                <!-- End Right -->
+
+              </div>
+              <!-- End Container -->
+
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/calculator.js"></script>
+  </body>
+</html>
