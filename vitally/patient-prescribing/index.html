@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Prescribing</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="stylesheet" href="css/corrections.css" />
+
+    <style>
+    input:checked + svg {
+    	display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <link rel="stylesheet" href="css/export.tailwind.css" />
+
+      <div class="tailwind" style="margin: 10px;">
+
+        <!-- Pullout -->
+        <div id="note-pullout" class="raw-pullout bg-white flex flex-col justify-between">
+          <div>
+            <div class="flex px-8 py-8 justify-between items-center border border-gray-200 border-l-0 border-t-0 border-r-0">
+              <h5 class="m-0 text-vitaly-dark">Add note</h5>
+              <a class="pullout-close"><img src="img/icon-close.svg" width="20" height="20" alt="Close"></a>
+            </div>
+
+            <!-- WYSIWYG -->
+            <div class="p-8">
+              <textarea class="raw-input border border-gray-300 rounded-md px-5 py-3 font14px text-vitaly-dark focus:border-vitaly-purple" rows="12" placeholder="Type any notes..."></textarea>
+            </div>
+
+            <!-- Files -->
+            <div class="p-8">
+              <h5 class="m-0 mb-8 text-vitaly-dark">Upload files</h5>
+              <div class="flex items-center w-auto">
+                <button class="flex items-center justify-center bg-gray-200 text-gray-500 hover:bg-gray-200 hover:text-vitaly-dark font-bold py-4 px-6 pl-5 rounded font14px"><img src="img/icon-pen.svg" width="16" height="16" alt="Add" class="mr-2">Upload file</button>
+                <p class="font12px text-gray-400 ml-10">Supported types: pdf, png, jpg, zip.<br/>Max upload: 2mb</p>
+              </div>
+
+              <div class="mt-6 mb-4">
+                <div class="flex items-center justify-between py-5 px-6 pr-8 mb-2 border border-gray-300 rounded-md">
+                  <div>
+                    <p class="font14px text-gray-500 font-weight-bold mb-1">document.zip</p>
+                    <p class="font12px text-gray-400">2.08mb</p>
+                  </div>
+                  <div class="flex items-center">
+                    <a class="ml-8"><img src="img/icon-download.svg" width="20" height="20" alt="Download"></a>
+                    <a class="ml-8"><img src="img/icon-delete.svg" width="13" height="15" alt="Delete"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="flex items-center justify-between py-5 px-6 pr-8 mb-2 border border-gray-300 rounded-md">
+                  <div>
+                    <p class="font14px text-gray-500 font-weight-bold mb-1">image.jpg</p>
+                    <p class="font12px text-gray-400">2.08mb</p>
+                  </div>
+                  <div class="flex items-center">
+                    <a class="ml-8"><img src="img/icon-download.svg" width="20" height="20" alt="Download"></a>
+                    <a class="ml-8"><img src="img/icon-delete.svg" width="13" height="15" alt="Delete"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex px-8 py-6 justify-between items-center border border-gray-200 border-l-0 border-b-0 border-r-0">
+            <a class="font14px text-error hover:text-error">Delete</a>
+            <div class="flex items-center">
+              <button class="flex items-center justify-center bg-gray-200 text-gray-500 hover:bg-gray-200 hover:text-vitaly-dark font-bold py-4 px-6 pl-5 rounded font14px">Send to Cameron</button>
+              <button class="ml-4 flex items-center justify-center bg-vitaly-purple text-white hover:bg-vitaly-dark hover:text-white font-bold py-4 px-6 pl-5 rounded font14px">Save</button>
+            </div>
+          </div>
+        </div>
+        <!-- End Pullout -->
+
+        <!-- sidebar+main content -->
+        <div class="relative flex-col sm:flex-row flex space-y-10 sm:space-y-0 space-x-0 sm:space-x-10">
+
+          <!-- PAGE CONTENT -->
+          <div class="w-full md:w-4/5 md:mx-auto md:mr-0">
+            <!-- PAGE activity -->
+            <article>
+
+              <!-- Treatment Plan -->
+              <div class="flex justify-between items-center">
+                <h5 class="text-vitaly-dark">Patient Notes & Files</h5>
+
+                <button class="pullout-action flex items-center justify-center bg-vitaly-purple text-white hover:bg-vitaly-dark hover:text-white font-bold py-4 px-6 pl-5 ml-6 rounded font12px"><img src="img/icon-add-white.svg" width="16" height="16" alt="Add" class="mr-2">Add</button>
+              </div>
+
+
+              <!-- Start Table -->
+              <div class="mt-6">
+
+                <!-- Table legend -->
+                <div class="border border-b-0 border-wild-sand px-5 py-3 lg:px-8 rounded-tl rounded-tr">
+                  <div class="w-full">
+                    <p class="font12px font-weight-semibold text-vitaly-dark">Notes</p>
+                  </div>
+                </div>
+                <!-- End Table legend -->
+
+                <!-- Table Row -->
+                <div class="lg:flex lg:items-start bg-white border border-wild-sand p-5 lg:px-8 rounded-tl rounded-tr lg:rounded-none">
+                  <div class="w-full lg:w-auto flex-none mb-3 lg:mr-10 lg:mb-0">
+                    <p class="font12px text-vitaly-purple font-weight-semibold">22 Jun 2020</p>
+                  </div>
+
+                  <div class="w-full">
+                    <div class="mb-4">
+                      <p class="font12px text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper et nisl nec lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </div>
+                    <div class="flex items-center">
+                      <a class="mr-3 font10px text-gray-500 font-weight-bold rounded-md border border-gray-300 py-2 px-4 pr-2 hover:no-underline flex items-center hover:text-vitaly-purple hover:border-vitaly-purple">Info & Indication <img class="ml-2" src="img/icon-file.svg" width="16" height="16" alt="File"></a>
+                      <a class="mr-3 font10px text-gray-500 font-weight-bold rounded-md border border-gray-300 py-2 px-4 pr-2 hover:no-underline flex items-center hover:text-vitaly-purple hover:border-vitaly-purple">Via TGA <img class="ml-2" src="img/icon-pdf.svg" width="16" height="16" alt="File"></a>
+                      <a class="font10px text-gray-500 font-weight-bold rounded-md border border-gray-300 py-2 px-4 pr-2 hover:no-underline flex items-center hover:text-vitaly-purple hover:border-vitaly-purple">image.jpg <img class="ml-2" src="img/icon-pdf2.svg" width="16" height="16" alt="File"></a>
+                    </div>
+                  </div>
+
+                  <div class="w-full lg:w-auto flex flex-none items-center justify-end">
+                    <a class="ml-8"><img src="img/icon-edit.svg" width="15" height="15" alt="Edit"></a>
+                    <a class="ml-10"><img src="img/icon-mail.svg" width="16" height="11" alt="Mail"></a>
+                    <a class="ml-10"><img src="img/icon-delete.svg" width="13" height="15" alt="Delete"></a>
+                  </div>
+                </div>
+                <!-- End Table Row -->
+
+                <!-- Table Row -->
+                <div class="lg:flex lg:items-start bg-white border border-t-0 border-wild-sand p-5 lg:px-8 rounded-tl rounded-tr lg:rounded-none">
+                  <div class="w-full lg:w-auto flex-none mb-3 lg:mr-10 lg:mb-0">
+                    <p class="font12px text-vitaly-purple font-weight-semibold">22 Jun 2020</p>
+                  </div>
+
+                  <div class="w-full">
+                    <div class="">
+                      <p class="font12px text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper et nisl nec lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </div>
+                  </div>
+
+                  <div class="w-full lg:w-auto flex flex-none items-center justify-end">
+                    <a class="ml-8"><img src="img/icon-edit.svg" width="15" height="15" alt="Edit"></a>
+                    <a class="ml-10"><img src="img/icon-mail.svg" width="16" height="11" alt="Mail"></a>
+                    <a class="ml-10"><img src="img/icon-delete.svg" width="13" height="15" alt="Delete"></a>
+                  </div>
+                </div>
+                <!-- End Table Row -->
+
+                <!-- Table Row -->
+                <div class="lg:flex lg:items-start bg-white border border-t-0 border-wild-sand p-5 lg:px-8 rounded-bl rounded-br">
+                  <div class="w-full lg:w-auto flex-none mb-3 lg:mr-10 lg:mb-0">
+                    <p class="font12px text-vitaly-purple font-weight-semibold">22 Jun 2020</p>
+                  </div>
+
+                  <div class="w-full">
+                    <div class="mb-4">
+                      <p class="font12px text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper et nisl nec lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </div>
+                    <div class="flex items-center">
+                      <a class="mr-3 font10px text-gray-500 font-weight-bold rounded-md border border-gray-300 py-2 px-4 pr-2 hover:no-underline flex items-center hover:text-vitaly-purple hover:border-vitaly-purple">Info & Indication <img class="ml-2" src="img/icon-file.svg" width="16" height="16" alt="File"></a>
+                      <a class="mr-3 font10px text-gray-500 font-weight-bold rounded-md border border-gray-300 py-2 px-4 pr-2 hover:no-underline flex items-center hover:text-vitaly-purple hover:border-vitaly-purple">Via TGA <img class="ml-2" src="img/icon-pdf.svg" width="16" height="16" alt="File"></a>
+                      <a class="font10px text-gray-500 font-weight-bold rounded-md border border-gray-300 py-2 px-4 pr-2 hover:no-underline flex items-center hover:text-vitaly-purple hover:border-vitaly-purple">image.jpg <img class="ml-2" src="img/icon-pdf2.svg" width="16" height="16" alt="File"></a>
+                    </div>
+                  </div>
+
+                  <div class="w-full lg:w-auto flex flex-none items-center justify-end">
+                    <a class="ml-8"><img src="img/icon-edit.svg" width="15" height="15" alt="Edit"></a>
+                    <a class="ml-10"><img src="img/icon-mail.svg" width="16" height="11" alt="Mail"></a>
+                    <a class="ml-10"><img src="img/icon-delete.svg" width="13" height="15" alt="Delete"></a>
+                  </div>
+                </div>
+                <!-- End Table Row -->
+
+              </div>
+              <!-- End Table -->
+
+
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/patient-prescribing.js"></script>
+  </body>
+</html>
