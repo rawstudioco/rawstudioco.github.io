@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link rel="stylesheet" href="css/corrections.css" />
+
+    <style>
+    input:checked + svg {
+    	display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="css/export.tailwind.css" />
+
+    <div class="tailwind">
+
+      <nav class="w-full fixed bg-white py-2 px-4 md:p-2 border-b border-gray-200 md:border-none site-nav z-50">
+        <div class="container mx-auto">
+          <div class="flex justify-between">
+
+            <!-- Left -->
+            <div class="flex items-center">
+
+              <!-- Mobile nav open -->
+              <a class="block md:hidden mr-8 open-mobile-menu w-8">
+                <img src="img/menu-open.svg" width="19px" height="14px" alt="Open menu" />
+              </a>
+              <!-- Mobile nav close -->
+              <a class="block md:hidden mr-8 close-mobile-menu w-8">
+                <img src="img/menu-close.svg" width="15px" height="15px" alt="Close menu" />
+              </a>
+
+              <!-- Mobile logo -->
+              <a class="block md:hidden" href="#">
+                <img src="img/vitally.svg" width="62" height="19" alt="Vital.ly" />
+              </a>
+
+              <!-- DESKTOP: Profile image -->
+              <div class="d-none md:block w-16 h-16 rounded-full bg-gray-200 mr-4"></div>
+              <!-- end -->
+
+              <!-- DESKTOP: Profile name -->
+              <div class="d-none md:block md:mr-8 lg:mr-16">
+                <h6 class="text-vitaly-dark m-0">Nutrition by Rosetta</h6>
+                <div class="flex item-center">
+                  <p class="font12px text-gray-500 m-0 mr-3">Supported by</p>
+                  <img src="img/vitally.svg" width="62" height="19" alt="Vital.ly" />
+                </div>
+              </div>
+              <!-- end -->
+
+              <!-- DESKTOP: Phone number -->
+              <div class="d-none md:block">
+                <p class="font12px text-gray-400 m-0">Phone order:</p>
+                <p class="font12px text-gray-500 font-weight-semibold m-0">1300 722 640</p>
+              </div>
+              <!-- end -->
+            </div>
+            <!-- end -->
+
+            <!-- Right -->
+            <div class="flex items-center">
+              <li class="block text-center rounded-md p-2 md:pt-2 md:pb-2 md:pl-3 md:pr-8 lg:pr-16 md:mr-2 lg:mr-6 relative md:hover:bg-gray-100 nav-link has_children">
+                <a class="text-gray-500 hover:text-gray-500 hover:no-underline">
+                  <div class="relative mx-auto md:w-20">
+                    <span class="d-none md:block nav-link_pill absolute font-weight-semibold text-center font10px rounded">2</span>
+                    <img class="m-0 mx-auto" src="img/icon-notification.svg" width="22" height="22" alt="Activity">
+                  </div>
+                  <p class="d-none md:block font12px text-gray-500 m-0">Activity</p>
+                  <span class="d-none md:block nav-link_arrow absolute"><img class="m-0" src="img/icon-dropdown.svg" width="10" height="5" alt="Open"></span>
+                </a>
+              </li>
+
+              <li class="block text-center rounded-md p-2 md:pt-2 md:pb-2 md:pl-3 md:pr-8 lg:pr-16 md:mr-2 lg:mr-6 relative md:hover:bg-gray-100 nav-link has_children open-clinic-menu">
+                <a class="text-gray-500 hover:text-gray-500 hover:no-underline">
+                  <div class="relative mx-auto md:w-20">
+                    <span class="d-none md:block nav-link_pill absolute font-weight-semibold text-center font10px rounded">3</span>
+                    <img class="m-0 mx-auto" src="img/icon-clinic.svg" width="22" height="22" alt="Clinic">
+                  </div>
+                  <p class="d-none md:block font12px text-gray-500 m-0">Clinic</p>
+                  <span class="d-none md:block nav-link_arrow absolute"><img class="m-0" src="img/icon-dropdown.svg" width="10" height="5" alt="Open"></span>
+                </a>
+
+                <!-- Submenu -->
+                <div class="absolute nav-link_submenu">
+                  <ul class="bg-white rounded-md py-4 text-left">
+                    <li class="py-2 px-4 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                      <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                      <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                        Nutrition by Rosetta
+                        <img src="img/icon-right-arrow.svg" width="5" height="10" alt="More" />
+                      </a>
+
+                      <div class="absolute nav-link_submenu_submenu">
+                        <ul class="bg-white rounded-md py-4 text-left">
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Dashboard
+                            </a>
+                          </li>
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Products
+                            </a>
+                          </li>
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Bookings
+                            </a>
+                          </li>
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Interactions
+                            </a>
+                          </li>
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Order history
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="py-2 px-4 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                      <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                      <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                        Ian’s Clinic
+                        <img src="img/icon-right-arrow.svg" width="5" height="10" alt="More" />
+                      </a>
+
+                      <!-- Submenu submenu -->
+                      <div class="absolute nav-link_submenu_submenu">
+                        <ul class="bg-white rounded-md py-4 text-left">
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Link 1
+                            </a>
+                          </li>
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Link 2
+                            </a>
+                          </li>
+                          <li class="py-4 px-6 bg-white hover:bg-gray-100 flex items-center">
+                            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                              Link 3
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end submenu submenu -->
+                    </li>
+                  </ul>
+                </div>
+                <!-- end submenu -->
+              </li>
+
+              <li class="block rounded-md p-2 md:pt-2 md:pb-2 md:pl-2 md:pr-8 lg:pr-16 md:mr-2 lg:mr-8 relative md:hover:bg-gray-100 nav-link has_children">
+                <a class="flex items-center text-gray-500 hover:text-gray-500 hover:no-underline">
+                  <!-- Profile image -->
+                  <div class="profile-image rounded-full bg-vitaly-purple md:mr-4"></div>
+                  <!-- end -->
+                  <div class="d-none md:block">
+                    <p class="font14px text-vitaly-dark m-0 font-weight-bold">Philippe H.</p>
+                    <p class="font12px m-0 text-vitaly-green">Free plan</p>
+                  </div>
+
+                  <span class="d-none md:block nav-link_arrow absolute"><img class="m-0" src="img/icon-dropdown.svg" width="10" height="5" alt="Open"></span>
+                </a>
+
+                <!-- Submenu -->
+                <div class="absolute nav-link_submenu">
+                  <ul class="bg-white rounded-md py-4 text-left">
+                    <li class="py-2 px-4 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item">
+                      <img class="block mr-4 flex-none" src="img/icon-settings.svg" width="22" height="22" alt="Account settings" />
+                      <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                        Account settings
+                      </a>
+                    </li>
+
+                    <li class="py-2 px-4 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item">
+                      <img class="block mr-4 flex-none" src="img/icon-signout.svg" width="22" height="22" alt="Sign out" />
+                      <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                        Sign out
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- end submenu -->
+              </li>
+
+              <div class="text-left flex items-center md:block">
+                <a class="block hover:no-underline p-2 md:p-0">
+                  <img class="md:mr-2" src="img/icon-bank.svg" width="22" height="22" alt="Bank">
+                  <span class="d-none md:inline font12px font-weight-semibold text-gray-500">0.00<span>
+                </a>
+                <a class="block hover:no-underline p-2 md:p-0">
+                  <img class="md:mr-2" src="img/icon-cart.svg" width="22" height="22" alt="Cart">
+                  <span class="d-none md:inline font12px font-weight-semibold text-vitaly-purple">14.53<span>
+                </a>
+              </div>
+            </div>
+            <!-- end -->
+
+          </div>
+
+        </div>
+        <!-- end container -->
+      </nav>
+      <!-- end nav -->
+
+      <!-- Mobile Menu -->
+      <div class="fixed bg-white w-full block md:hidden border-b border-gray-200 mobile-menu z-40">
+        <ul class="m-0 p-0">
+
+          <!-- Clinic dropdown -->
+          <li class="px-6 py-3 pt-6 clinic-item has_children hover:bg-white">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                <span class="block font14px font-weight-bold text-vitaly-dark">Nutrition by Rosetta</span>
+                <span class="block font12px text-gray-400">Your current clinic</span>
+              </a>
+              <img src="img/icon-reorder.svg" width="10" height="11" alt="Dropdown">
+            </div>
+
+            <ul class="clinic-item_submenu">
+              <li class="py-3 px-3 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Ian’s Clinic
+                </a>
+              </li>
+              <li class="py-3 px-3 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Blue Clinic
+                </a>
+              </li>
+              <li class="py-3 px-3 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Green Clinic
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- end clinic dropdown -->
+
+          <li class="px-6 py-4">
+            <div class="flex items-center">
+              <span class="block w-12 flex-none mr-4">
+                <img src="img/icon-dashboard.svg" width="19" height="18" class="block mx-auto" alt="Dashboard" />
+              </span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                Dashboard
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center">
+              <span class="block w-12 flex-none mr-4">
+                <img src="img/icon-product.svg" width="20" height="20" class="block mx-auto" alt="Products" />
+              </span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                Products
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center menu-link has_children">
+              <span class="block w-12 flex-none mr-4">
+                <img src="img/icon-patients.svg" width="20" height="20" class="block mx-auto" alt="Patients" />
+              </span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                Patients
+              </a>
+            </div>
+
+            <ul class="m-0 py-8 pb-0 pl-16 menu-link_submenu">
+              <li class="py-4 pt-8 border-t border-gray-200">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Add a patient</a>
+              </li>
+              <li class="py-4">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Product switch</a>
+              </li>
+              <li class="py-4">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Drafts</a>
+              </li>
+              <li class="py-4">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Adjust pricing</a>
+              </li>
+              <li class="py-4 pb-8 border-b border-gray-200">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Payment info</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center menu-link has_children">
+              <span class="block w-12 flex-none mr-4">
+                <img src="img/icon-calendar.svg" width="20" height="20" class="block mx-auto" alt="Bookings" />
+              </span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                Bookings
+              </a>
+            </div>
+
+            <ul class="m-0 py-8 pb-0 pl-16 menu-link_submenu">
+              <li class="py-4 pt-8 border-t border-gray-200">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">My bookings</a>
+              </li>
+              <li class="py-4">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Payments</a>
+              </li>
+              <li class="py-4">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">My services</a>
+              </li>
+              <li class="py-4 pb-8 border-b border-gray-200">
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Settings</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center">
+              <span class="block w-12 flex-none mr-4">
+                <img src="img/icon-interactions.svg" width="20" height="20" class="block mx-auto" alt="Interactions" />
+              </span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                Interactions
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4 pb-6">
+            <div class="flex items-center">
+              <span class="block w-12 flex-none mr-4">
+                <img src="img/icon-order.svg" width="20" height="20" class="block mx-auto" alt="Order histroy" />
+              </span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                Order history
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4 border-t border-gray-200">
+            <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple font-weight-bold w-full">
+              Sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile SELECT Menu -->
+      <div class="fixed bg-white w-full block md:hidden border-b border-gray-200 mobile-select-menu z-40">
+        <ul class="m-0 p-0">
+
+          <li class="px-6 py-3 pt-6 clinic-item hover:bg-white">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                <span class="block font14px font-weight-bold text-vitaly-dark">Nutrition by Rosetta</span>
+                <span class="block font12px text-gray-400">Your current clinic</span>
+              </a>
+              <img src="img/icon-reorder.svg" width="10" height="11" alt="Dropdown">
+            </div>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                Ian’s Clinic
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                Blue Clinic
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4 pb-6">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                Green Clinic
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Clinic Menu -->
+      <div class="fixed bg-white w-full block md:hidden border-b border-gray-200 mobile-clinic-menu z-40">
+        <ul class="m-0 p-0">
+
+          <li class="px-6 py-4 pt-6">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                Nutrition by Rosetta
+                <img src="img/icon-right-arrow.svg" width="5" height="10" alt="More" />
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                Ian’s Clinic
+                <img src="img/icon-right-arrow.svg" width="5" height="10" alt="More" />
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                Blue Clinic
+                <img src="img/icon-right-arrow.svg" width="5" height="10" alt="More" />
+              </a>
+            </div>
+          </li>
+
+          <li class="px-6 py-4 pb-6">
+            <div class="flex items-center">
+              <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+              <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple flex justify-between items-center w-full">
+                Green Clinic
+                <img src="img/icon-right-arrow.svg" width="5" height="10" alt="More" />
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DESKTOP: Search -->
+      <div class="w-full pt-40">
+        <div class="container mx-auto">
+          <div class="d-none md:block w-full md:w-2/5">
+            <form class="flex items-center">
+              <input class="raw-input border border-gray-300 rounded-md rounded-tr-none rounded-br-none border-r-white px-5 py-3 font12px text-vitaly-dark focus:border-vitaly-purple" type="text" name="searchby" id="sarchby" placeholder="By ingredient, category, product name, etc">
+              <button class="block bg-vitaly-purple text-white hover:bg-vitaly-dark hover:text-white font-bold py-3 px-6 rounded rounded-tl-none rounded-bl-none font14px" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end search -->
+
+      <!-- Main container -->
+      <div class="container mx-auto mt-10">
+
+        <!-- DESKTOP -->
+        <div class="d-none md:block w-full md:w-1/4 md:p-2">
+          <ul class="m-0 p-0">
+
+            <!-- Clinic dropdown -->
+            <li class="px-3 py-3 pr-4 clinic-item has_children hover:bg-white">
+              <div class="flex items-center">
+                <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  <span class="block font14px font-weight-bold text-vitaly-dark">Nutrition by Rosetta</span>
+                  <span class="block font12px text-gray-400">Your current clinic</span>
+                </a>
+                <img src="img/icon-reorder.svg" width="10" height="11" alt="Dropdown">
+              </div>
+
+              <ul class="clinic-item_submenu">
+                <li class="py-3 px-3 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                  <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                    Ian’s Clinic
+                  </a>
+                </li>
+                <li class="py-3 px-3 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                  <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                    Blue Clinic
+                  </a>
+                </li>
+                <li class="py-3 px-3 bg-white hover:bg-gray-100 flex items-center nav-link_submenu_item has_children">
+                  <span class="block w-12 h-12 bg-gray-200 rounded-full mr-4 flex-none"></span>
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                    Green Clinic
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- end clinic dropdown -->
+
+            <li class="px-3 py-4">
+              <div class="flex items-center">
+                <span class="block w-12 flex-none mr-4">
+                  <img src="img/icon-dashboard.svg" width="19" height="18" class="block mx-auto" alt="Dashboard" />
+                </span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Dashboard
+                </a>
+              </div>
+            </li>
+
+            <li class="px-3 py-4">
+              <div class="flex items-center">
+                <span class="block w-12 flex-none mr-4">
+                  <img src="img/icon-product.svg" width="20" height="20" class="block mx-auto" alt="Products" />
+                </span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Products
+                </a>
+              </div>
+            </li>
+
+            <li class="px-3 py-4">
+              <div class="flex items-center menu-link has_children">
+                <span class="block w-12 flex-none mr-4">
+                  <img src="img/icon-patients.svg" width="20" height="20" class="block mx-auto" alt="Patients" />
+                </span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Patients
+                </a>
+              </div>
+
+              <ul class="m-0 py-8 pb-0 pl-16 menu-link_submenu">
+                <li class="py-4 pt-8 border-t border-gray-200">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Add a patient</a>
+                </li>
+                <li class="py-4">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Product switch</a>
+                </li>
+                <li class="py-4">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Drafts</a>
+                </li>
+                <li class="py-4">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Adjust pricing</a>
+                </li>
+                <li class="py-4 pb-8 border-b border-gray-200">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Payment info</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="px-3 py-4">
+              <div class="flex items-center menu-link has_children">
+                <span class="block w-12 flex-none mr-4">
+                  <img src="img/icon-calendar.svg" width="20" height="20" class="block mx-auto" alt="Bookings" />
+                </span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Bookings
+                </a>
+              </div>
+
+              <ul class="m-0 py-8 pb-0 pl-16 menu-link_submenu">
+                <li class="py-4 pt-8 border-t border-gray-200">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">My bookings</a>
+                </li>
+                <li class="py-4">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Payments</a>
+                </li>
+                <li class="py-4">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">My services</a>
+                </li>
+                <li class="py-4 pb-8 border-b border-gray-200">
+                  <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">Settings</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="px-3 py-4">
+              <div class="flex items-center">
+                <span class="block w-12 flex-none mr-4">
+                  <img src="img/icon-interactions.svg" width="20" height="20" class="block mx-auto" alt="Interactions" />
+                </span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Interactions
+                </a>
+              </div>
+            </li>
+
+            <li class="px-3 py-4">
+              <div class="flex items-center">
+                <span class="block w-12 flex-none mr-4">
+                  <img src="img/icon-order.svg" width="20" height="20" class="block mx-auto" alt="Order histroy" />
+                </span>
+                <a class="font14px hover:no-underline text-vitaly-dark hover:text-vitaly-purple w-full">
+                  Order histroy
+                </a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/navigation.js"></script>
+  </body>
+</html>
